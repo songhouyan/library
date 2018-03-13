@@ -10,7 +10,8 @@ User.create!(username: 'admin', email: 'admin@email.com', password: 'password', 
 
 puts 'users'
 50.times do |n|
-    User.create!(username: Faker::Internet.user_name + "#{n}" , email: Faker::Internet.email, password: 'password',
+    User.create!(username: Faker::Internet.user_name + "#{n}" , 
+        email: Faker::Internet.email, password: 'password',
         password_confirmation: 'password')
     print '.'
 end
@@ -18,6 +19,6 @@ end
 puts 'books'
 (1 + rand(900)).times do
     Book.create!(title: Faker::Book.title, author: Faker::Book.author, comment: Faker::Lorem.paragraph,
-        user: User.all.sample)
+        user: User.all.sample, availability: (0..1).to_a.sample )
     print '.'
 end
