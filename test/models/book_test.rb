@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: books
+#
+#  id           :integer          not null, primary key
+#  title        :string
+#  author       :string
+#  state        :text
+#  availability :boolean
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  isbn         :string
+#  user_id      :integer
+#
+
 require 'test_helper'
 
 class BookTest < ActiveSupport::TestCase
