@@ -29,7 +29,8 @@ class User < ApplicationRecord
   attr_accessor :login
 
   validates :username, presence: true, uniqueness: { case_sensitive: false }
-
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates_format_of :email, with: VALID_EMAIL_REGEX
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
 
   def validate_username

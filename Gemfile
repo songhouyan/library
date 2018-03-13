@@ -55,3 +55,5 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
+
+gem 'faker'

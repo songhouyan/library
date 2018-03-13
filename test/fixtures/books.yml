@@ -5,7 +5,7 @@
 #  id           :integer          not null, primary key
 #  title        :string
 #  author       :string
-#  state        :text
+#  comment      :text
 #  availability :boolean
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
