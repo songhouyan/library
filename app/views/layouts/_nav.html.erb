@@ -1,35 +1,66 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <%# <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button> %>
-      <%= link_to 'Librapp', root_url, class: 'navbar-brand' %>
+      </button>
+      <a class="navbar-brand" href="#">
+        <%= link_to root_path do %>
+          <%= fa_icon 'book 3x', style: 'margin-top: 5px;' %>
+          <%#= image_tag('logo.png', size: '45x36', alt: 'Brand', style: 'margin-top: 8px;') %>
+        <% end %>
+      </a>
     </div>
-
-    <% if user_signed_in? %>
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'My books', books_path %></li>
+      <ul class="nav navbar-nav navbar-left">
+      <% if current_user %>
+        <% #This looks ugly af  %>
+        <%# if current_user.admin? or current_user.chief_executive? or current_user.reader_admin? %>
+          <li id="library" class=""><%= link_to 'Mi Librería', new_user_session_path %></li>
+        <%# end %>
+        <%# if current_user.admin? or current_user.chief_executive? or current_user.area_chief? or current_user.reader_admin? or current_user.manager? %>
+          <li id="browse" class=""><%= link_to 'Explorar', new_user_session_path %></li>
+        <%# end %>
+      <% end %>
       </ul>
-       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %><span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'Profile', edit_user_registration_path %></li>
-            <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-          </ul>
-        </li>
+<% 
+=begin %>
+        <%= form_tag items_path, :method => 'get', class: 'navbar-form navbar-left' do %>
+          <%= text_field_tag :search, params[:search], class: 'form-control'%>
+          <%= submit_tag 'Search', class: 'btn btn-primary' %>
+        <% end %>
+<% 
+=end %>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <span class="navbar-text hidden-xs">
+            Bienvenido, <%= current_user.username %>
+          </span>
+          <li class="dropdown">
+            <a href=<%#= profile_path(current_user.employee_id) %> class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username+' ' %><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Perfil', edit_user_registration_path %></li>
+              <li><%= link_to 'Opciones', edit_user_registration_path %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+            <li><%= link_to 'Iniciar Sesión', new_user_session_path %></li>
+            <li><%#= link_to "Sign Up!", new_user_registration_path %></li>
+        <% end %>
       </ul>
-    
-    </div><!-- /.navbar-collapse -->
-
-    <% end %>
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
+
+<%
+=begin %>
+<p id="notice"><%= notice %></p>
+<h1><%= content %></h1>
+<%
+=end %>
+

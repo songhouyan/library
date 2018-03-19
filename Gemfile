@@ -57,3 +57,6 @@ gem 'simple_form'
 gem 'devise'
 
 gem 'faker'
+
+# Font-Awesome
+gem 'font-awesome-rails'
