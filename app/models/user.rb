@@ -25,6 +25,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   
   has_many :books, dependent: :destroy
+  has_many :authored_conversations, class_name: 'Conversation', foreign_key: 'author_id'
+  has_many :received_conversations, class_name: 'Conversation', foreign_key: 'receiver_id'
+  has_many :personal_messages, dependent: :destroy
   
   attr_accessor :login
 
@@ -47,5 +50,9 @@ class User < ApplicationRecord
       conditions[:email].downcase! if conditions[:email]
       where(conditions.to_h).first
     end
+  end
+
+  def name
+    username
   end
 end

@@ -449,3 +449,9 @@ input[type="color"]:focus,
 p.help-block {
   margin-left: 0;
 }
+
+#conversation-body {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 2em;
+}
