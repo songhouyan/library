@@ -1,6 +1,6 @@
 class ConversationsController < ApplicationController
   before_action :set_conversation, except: [:index]
-  before_action :check_participating, except: [:index]
+  before_action :check_participating!, except: [:index]
 
   def index
     @conversations = Conversation.participating(current_user).order('updated_at DESC')
@@ -10,23 +10,7 @@ class ConversationsController < ApplicationController
     @personal_message = PersonalMessage.new
   end
 
-  def new
-    redirect_to conversation_path(@conversation) && return if @conversation
-    @personal_message = current_user.personal_messages.build
-  end
-
   private
-
-  def find_conversation!
-    if params[:receiver_id]
-      @receiver = User.find_by(id: params[:receiver_id])
-      redirect_to(conversations_path) && return unless @receiver
-      @conversation = Conversation.between(current_user.id, @receiver.id)[0]
-    else
-      @conversation = Conversation.find_by(id: params[:conversation_id])
-      redirect_to(conversations_path) && return unless @conversation && @conversation.participates?(current_user)
-    end
-  end
 
   def set_conversation
     @conversation = Conversation.find_by(id: params[:id])
