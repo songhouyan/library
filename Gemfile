@@ -52,7 +52,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jquery-rails'
-# gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 
@@ -62,3 +62,6 @@ gem 'faker'
 gem 'font-awesome-rails'
 
 # gem 'bootstrap', '~> 4.0.0'
+
+#pg_search
+gem 'pg_search'

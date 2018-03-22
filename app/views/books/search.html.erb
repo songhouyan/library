@@ -1,0 +1,20 @@
+<div class="container-90">
+  <h2>Resultados</h2>
+  <div class="row">
+    <% @books.each do |book| %>
+      <div class="col-xs-4 col-md-2" style="padding: 0 !important;">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= image_tag('http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/book-icon.png', class: 'img-responsive') %>
+          </div>
+          <div class="panel-footer text-center">
+            <div class="panel-footer-text">
+              <%= book.title %>
+            </div>
+            <%#= book.author %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

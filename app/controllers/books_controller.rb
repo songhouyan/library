@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:search]
   before_action :set_book, only: [:show, :edit, :update, :destroy]
   
   # GET /books
@@ -8,6 +8,18 @@ class BooksController < ApplicationController
     @books = current_user.books
   end
   
+  def search
+    if params[:search]
+      books = Book.search(params[:search])
+    end
+    
+    if books.empty?
+      flash[:notice] = 'Ningún resultado'
+      redirect_to root_path
+    else
+      @books = books
+    end
+  end
   # GET /books/1
   # GET /books/1.json
   def show
@@ -38,7 +50,7 @@ class BooksController < ApplicationController
       end
     end
   end
-
+  
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
