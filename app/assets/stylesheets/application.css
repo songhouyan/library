@@ -449,3 +449,18 @@ input[type="color"]:focus,
 p.help-block {
   margin-left: 0;
 }
+
+/* .panel { -webkit-box-shadow: none; box-shadow: none; border: 0px; } */
+
+.panel-footer{
+  height: 60px;
+  overflow: auto;
+}
+
+.panel-footer-text {
+  font-size: 0.9em;
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

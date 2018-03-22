@@ -48,4 +48,10 @@ class User < ApplicationRecord
       where(conditions.to_h).first
     end
   end
+
+  def add_tags_to_books
+    Book.all.each do | book|
+      book.update!(tags: [Faker::Book.genre.downcase, Faker::Book.genre.downcase, Faker::Book.genre.downcase])
+    end
+  end
 end
