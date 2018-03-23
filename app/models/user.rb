@@ -49,6 +49,10 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
+  has_many :authored_conversations, class_name: 'Conversation', foreign_key: 'author_id'
+  has_many :received_conversations, class_name: 'Conversation', foreign_key: 'receiver_id'
+
+  has_many :personal_messages, dependent: :destroy
   
   attr_accessor :login
 
@@ -103,5 +107,8 @@ class User < ApplicationRecord
     Book.all.each do | book|
       book.update!(tags: [Faker::Book.genre.downcase, Faker::Book.genre.downcase, Faker::Book.genre.downcase])
     end
+    
+  def name
+    username
   end
 end

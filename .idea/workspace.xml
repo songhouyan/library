@@ -2,9 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a3a2737-3afc-430e-96e5-510892ca3f5d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/librapp.iml" afterPath="$PROJECT_DIR$/.idea/librapp.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/nova.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/conversations.coffee" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/controllers/conversations_controller.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/controllers/personal_messages_controller.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/models/conversation.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/models/personal_message.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/application/_menu.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/conversations/_conversation.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/conversations/index.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/conversations/show.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/personal_messages/_personal_message.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/personal_messages/new.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/users/_user.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20180321064546_create_conversations.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20180321064829_create_personal_messages.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/conversations.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/personal_messages.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/models/conversation_test.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/models/personal_message_test.rb" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/books.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/books.scss" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/static_pages.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/static_pages.scss" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -99,12 +128,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521796564364</updated>
-      <workItem from="1521796565860" duration="290000" />
+      <workItem from="1521796565860" duration="1208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290000" />
+    <option name="totallyTimeSpent" value="1208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="105" width="1366" height="738" extended-state="6" />
@@ -116,7 +145,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.9371069" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
