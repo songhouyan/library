@@ -107,8 +107,9 @@ class User < ApplicationRecord
     Book.all.each do | book|
       book.update!(tags: [Faker::Book.genre.downcase, Faker::Book.genre.downcase, Faker::Book.genre.downcase])
     end
-    
-  def name
-    username
   end
+    
+  # def name
+  #   username
+  # end
 end

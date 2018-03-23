@@ -5,7 +5,9 @@
       <div class="col-xs-4 col-md-2" style="padding: 0 !important;">
         <div class="panel panel-default">
           <div class="panel-body">
-            <%= image_tag('http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/book-icon.png', class: 'img-responsive') %>
+            <%= link_to book_path(book) do %>
+              <%= image_tag(book.cover.url(:thumb), class: 'img-responsive') %>
+            <% end %>
           </div>
           <div class="panel-footer text-center">
             <div class="panel-footer-text">

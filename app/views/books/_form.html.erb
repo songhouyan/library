@@ -11,6 +11,17 @@
     </div>
   <% end %>
 
+  <%= f.label :cover %>
+  <label class="btn btn-default" style="margin-left: 0.6%;">
+    Add a file!
+    <span style="display:none;">
+      <%= f.input :cover, as: :file %>
+    </span>
+  </label>
+  <br> <br>
+
+  
+  
   <div class="field">
     <%= f.input :title %>
   </div>
@@ -29,6 +40,10 @@
 
   <div class="field">
     <%= f.input :availability %>
+  </div>
+
+  <div class="field">
+    <%= f.input :tags %>
   </div>
 
   <div class="actions">
