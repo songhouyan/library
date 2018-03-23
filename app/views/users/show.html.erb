@@ -11,7 +11,7 @@
             </div>
             <div class="content text-center">
                 <div class="main">
-                  <h3 class="name"><%= @user.name.titleize %></h3>
+                  <h3 class="name"><%= @user.name || '' %></h3>
                   <%# <p class="profession"><%= @user.age || '' </p>%>
                   <br>
                   <h5><%= fa_icon 'id-card', class: 'text-muted' %> <%= @user.age || '' %>, <%= @user.gender || '' %> </h5>

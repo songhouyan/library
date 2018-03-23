@@ -30,13 +30,13 @@
 
         <%= form_tag search_path, method: :get, class: 'navbar-form navbar-left' do %>
           <%= text_field_tag :search, params[:search], class: 'form-control'%>
-          <%= submit_tag 'Search', class: 'btn btn-primary' %>
+          <%= submit_tag 'Buscar!', class: 'btn btn-primary' %>
         <% end %>
 
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
           <span class="navbar-text hidden-xs">
-            Bienvenido, <%= current_user.name.split(' ').first || '' %>
+            Bienvenido, <%=  current_user.name.nil? ? current_user.username : current_user.name.split(' ').first %>
           </span>
           <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
           <li class="dropdown">
