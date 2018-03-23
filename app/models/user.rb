@@ -103,10 +103,10 @@ class User < ApplicationRecord
     Book.where("user_id IN (#{following_ids})", user_id: id)
   end
   
-  def add_tags_to_books
-    Book.all.each do | book|
-      book.update!(tags: [Faker::Book.genre.downcase, Faker::Book.genre.downcase, Faker::Book.genre.downcase])
-    end
+  # def add_tags_to_books
+  #   Book.all.each do | book|
+  #     book.update!(tags: [Faker::Book.genre.downcase, Faker::Book.genre.downcase, Faker::Book.genre.downcase])
+  #   end
     
   def name
     username
