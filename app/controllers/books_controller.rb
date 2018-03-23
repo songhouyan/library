@@ -7,6 +7,10 @@ class BooksController < ApplicationController
   def index
     @books = current_user.books
   end
+
+  def feed
+    @feed = current_user.feed.order(created_at: :asc).limit(2)
+  end
   
   def search
     if params[:search]

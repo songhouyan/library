@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'profile/:username', to: 'users#show', as: :profile
   get ':username/followers', to: 'users#followers', as: :followers
   get ':username/following', to: 'users#following', as: :following
+  get 'feed', to: 'books#feed'
   resources :relationships,  only: [:create, :destroy]
   resources :books
   #resources :users, only: [:show]

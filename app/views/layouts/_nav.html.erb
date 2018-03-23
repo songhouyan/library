@@ -20,10 +20,10 @@
       <% if current_user %>
         <% #This looks ugly af  %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.reader_admin? %>
-          <li id="library" class=""><%= link_to 'Mi Librería', books_path %></li>
+          <li id="library" class=""><%= link_to 'Mi biblioteca', books_path %></li>
         <%# end %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.area_chief? or current_user.reader_admin? or current_user.manager? %>
-          <li id="browse" class=""><%= link_to 'Explorar', new_user_session_path %></li>
+          <li id="browse" class=""><%= link_to 'Explorar', feed_path %></li>
         <%# end %>
       <% end %>
       </ul>

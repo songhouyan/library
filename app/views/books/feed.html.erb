@@ -1,0 +1,7 @@
+<h1>Libros publicados recientemente</h1>
+<ul>
+    <% @feed.each do |book| %>
+        <li><%= book.title %></li>
+        <li><%= link_to book.user.username, profile_path(book.user.username) %></li>
+    <% end %>
+</ul>
