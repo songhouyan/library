@@ -15,6 +15,8 @@
           <%= f.error_notification %>
 
           <div class="form-inputs">
+            <%= f.file_field :avatar, label: 'Avatar' %>
+            <%= f.file_field :cover, label: 'Cover' %>
             <%= f.input :username, required: true, autofocus: true %>
             <%= f.input :email, required: true, autofocus: true %>
             <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>

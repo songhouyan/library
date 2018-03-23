@@ -60,3 +60,5 @@ gem 'faker'
 
 # Font-Awesome
 gem 'font-awesome-rails'
+
+gem 'paperclip', '~> 4.1'

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="cover">
+            <%= image_tag(@user.cover.url(:medium), alt: 'img-circle') %>
+          </div>
+            <div class="user">
+              <%= image_tag(@user.avatar.url(:medium), alt: 'img-circle') %>
+            </div>
+            <div class="content text-center">
+                <div class="main">
+                  <h3 class="name"><%= @user.name.titleize %></h3>
+                  <%# <p class="profession"><%= @user.age || '' </p>%>
+                  <br>
+                  <h5><%= fa_icon 'id-card', class: 'text-muted' %> <%= @user.age || '' %>, <%= @user.gender || '' %> </h5>
+                  <h5><%= fa_icon 'comment', class: 'text-muted' %> <%= @user.bio %></h5>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Libros disponibles</h4>
+  </div>
+  <div class="panel-body">
+  </div>
+</div>
