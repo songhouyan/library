@@ -19,7 +19,8 @@ end
 puts 'books'
 (1 + rand(900)).times do
     Book.create!(title: Faker::Book.title, author: Faker::Book.author, comment: Faker::Lorem.paragraph,
-        user: User.all.sample, availability: (0..1).to_a.sample, 
+        user: User.all.sample, availability: (0..1).to_a.sample,
+        availability: %w[true false].sample,
         tags: [Faker::Book.genre.downcase, Faker::Book.genre.downcase, Faker::Book.genre.downcase] )
     print '.'
 end

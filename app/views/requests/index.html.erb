@@ -1,0 +1,19 @@
+<h1>My requests</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Libro</th>
+            <th>Usuario</th>
+            <th>Ver</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @requests.each do |request| %>
+            <tr>
+                <td><%= request.book.title %></td>
+                <td><%= request.user.username %></td>
+                <td><%= link_to 'Ver', request %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

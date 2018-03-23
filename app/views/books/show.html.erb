@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <div class="container-80">
 <div class="card" style="margin-top: 20px; padding-top: 20px;">
   <div class="content">
@@ -25,9 +24,11 @@
           </div>
           <p style="margin-left: 1%;"><%= @book.user.username %></p>
         <% end %>
-        <div class="btn btn-default" style="margin-top: -20%; margin-left: 10%;">
-          <%= link_to 'Prestar', new_personal_message_path(receiver_id: @book.user), :class => "btn" %>
-        </div>
+        <% unless @book.user == current_user || !@book.availability %>
+          <div style="margin-left: 20%;">
+            <%= render 'new_request' %>
+          </div>
+        <% end %>
         
         <p>
           <%#= @book.availability %>
