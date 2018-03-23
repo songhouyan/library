@@ -58,6 +58,8 @@ gem 'devise'
 
 gem 'faker'
 
+gem 'pg_search'
+
 # Font-Awesome
 gem 'font-awesome-rails'
 
