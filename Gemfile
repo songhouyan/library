@@ -61,11 +61,4 @@ gem 'faker'
 # Font-Awesome
 gem 'font-awesome-rails'
 
-<<<<<<< HEAD
-# gem 'bootstrap', '~> 4.0.0'
-
-#pg_search
-gem 'pg_search'
-=======
 gem 'paperclip', '~> 4.1'
->>>>>>> paperclip
