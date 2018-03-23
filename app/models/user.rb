@@ -16,6 +16,18 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  name                   :string
+#  age                    :integer
+#  gender                 :string
+#  bio                    :text
+#  avatar_file_name       :string
+#  avatar_content_type    :string
+#  avatar_file_size       :integer
+#  avatar_updated_at      :datetime
+#  cover_file_name        :string
+#  cover_content_type     :string
+#  cover_file_size        :integer
+#  cover_updated_at       :datetime
 #
 
 class User < ApplicationRecord

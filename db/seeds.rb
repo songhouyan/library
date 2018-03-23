@@ -10,7 +10,7 @@ User.create!(username: 'admin', email: 'admin@email.com', password: 'password', 
 
 puts 'users'
 50.times do |n|
-    User.create!(username: Faker::Internet.user_name + "#{n}" , 
+    User.create!(username: Faker::Internet.user_name + "#{n}",
         email: Faker::Internet.email, password: 'password',
         password_confirmation: 'password')
     print '.'

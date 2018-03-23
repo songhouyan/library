@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   
   devise_for :users
+  get 'search', to: 'books#search'
   get 'profile/:username', to: 'users#show', as: :profile
   resources :books
   resources :users, only: [:show]
