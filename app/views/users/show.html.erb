@@ -16,6 +16,8 @@
                   <br>
                   <h5><%= fa_icon 'id-card', class: 'text-muted' %> <%= @user.age || '' %>, <%= @user.gender || '' %> </h5>
                   <h5><%= fa_icon 'comment', class: 'text-muted' %> <%= @user.bio %></h5>
+                  <%= link_to @user.followers.count.to_s + ' Seguidores', followers_path(@user.username) %> | <%= link_to @user.following.count.to_s + ' Siguiendo', following_path(@user.username) %>
+                  <%= render 'follow_form' if current_user %>
                 </div>
             </div>
           </div>

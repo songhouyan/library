@@ -23,3 +23,8 @@ puts 'books'
         tags: [Faker::Book.genre.downcase, Faker::Book.genre.downcase, Faker::Book.genre.downcase] )
     print '.'
 end
+
+puts 'followings'
+User.all.each do |user|
+    user.follow(User.all.sample)
+end
