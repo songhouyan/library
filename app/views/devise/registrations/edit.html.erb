@@ -8,11 +8,11 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
-      <%= f.label :avatar %>
+        <%= f.label :avatar %>
         <label class="btn btn-default">
           Add a file!
           <span style="display:none;">
-            <%= f.file_field :avatar, name: 'avatar' %>
+            <%= f.input :avatar, as: :file %>
           </span>
         </label>
         <br> <br>
@@ -20,7 +20,7 @@
         <label class="btn btn-default" style="margin-left: 0.6%;">
           Add a file!
           <span style="display:none;">
-            <%= f.file_field :avatar, name: 'cover' %>
+            <%= f.input :cover, as: :file %>
           </span>
         </label>
         <br> <br>

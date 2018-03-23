@@ -15,4 +15,7 @@
 
 class Book < ApplicationRecord
     belongs_to :user
+
+    has_attached_file :cover, :styles => { :medium => "1400x2200>", :thumb => "210x330#" }, :default_url => ":style/book_cover.png"
+    validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
 end

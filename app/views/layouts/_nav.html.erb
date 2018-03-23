@@ -37,6 +37,11 @@
 =end %>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
+          <li>
+            <%= link_to new_book_path do %>
+              <%= fa_icon 'plus 1x', style: 'margin-right: -12px; margin-top: -1px; font-size: 1.8em; -webkit-text-stroke: 2px #F5F5F5;' %>
+            <% end %>
+          </li>
           <span class="navbar-text hidden-xs">
             Bienvenido, <%= current_user.name.split(' ').first || '' %>
           </span>

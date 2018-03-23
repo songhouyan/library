@@ -11,7 +11,7 @@
             </div>
             <div class="content text-center">
                 <div class="main">
-                  <h3 class="name"><%= @user.name.titleize %></h3>
+                  <h3 class="name"><%= @user.name || '' %></h3>
                   <%# <p class="profession"><%= @user.age || '' </p>%>
                   <br>
                   <h5><%= fa_icon 'id-card', class: 'text-muted' %> <%= @user.age || '' %>, <%= @user.gender || '' %> </h5>
@@ -26,8 +26,27 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h4>Libros disponibles</h4>
+    <h4 style="font-variant: small-caps;" class="text-center">Libros disponibles</h4>
   </div>
   <div class="panel-body">
+   <%# <div class="row body-eval"> %>
+      <% @user.books.reverse.each do |book| %>
+        <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
+          <div class="panel panel-default" style="display: inline-block !important"> 
+            <div class="panel-body">
+            <%= link_to book_path(book) do %>
+              <%= image_tag(book.cover.url(:thumb), class: 'img-responsive') %>
+            <% end %>
+            </div>
+            <div class="panel-footer text-center">
+              <div class="panel-footer-text">
+                <%= book.title %>
+              </div>
+              <%#= book.author %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+   <%# </div> %>
   </div>
 </div>

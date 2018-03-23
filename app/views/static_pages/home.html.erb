@@ -1,13 +1,13 @@
-<div class="container-90">
+<div class="container-90" style="margin-right: 200px;">
   <%# Todo esto lo podríamos hacer más bonito con algún arreglo que le de el nombre al header, y las opciones de qué libros consultar. %>
   <%# Así no repetimos prácticamente lo mismo 4 veces %>
   <h2>Últimos Libros</h2>
   <div class="row">
-    <% Book.all.last(5).each do |book| %>
-      <div class="col-xs-4 col-md-2" style="padding: 0 !important;">
+    <% Book.all.last(5).reverse.each do |book| %>
+      <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
         <div class="panel panel-default">
           <div class="panel-body">
-            <%= image_tag('https://i.imgur.com/OOhmIDm.png', class: 'img-responsive') %>
+            <%= image_tag(book.cover.url(:thumb), class: 'img-responsive', style: 'border-radius: 8px') %>
           </div>
           <div class="panel-footer text-center">
             <div class="panel-footer-text">
@@ -23,11 +23,11 @@
   <h2>Más Prestados</h2>
   <div class="row">
     <% Book.all.first(5).each do |book| %>
-      <div class="col-xs-4 col-md-2" style="padding: 0 !important;">
+      <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
         <div class="panel panel-default">
           <div class="panel-body">
             <%# Aquí sería la foto_irl del libro %>
-            <%= image_tag('http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/book-icon.png', class: 'img-responsive') %>
+            <%= image_tag(book.cover.url(:thumb), class: 'img-responsive') %>
           </div>
           <div class="panel-footer text-center">
             <div class="panel-footer-text">
@@ -42,11 +42,11 @@
 
   <h2>Últimos Regresados</h2>
   <div class="row">
-    <% Book.all.last(5).each do |book| %>
-      <div class="col-xs-4 col-md-2" style="padding: 0 !important;">
+    <% Book.all.last(5).reverse.each do |book| %>
+      <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
         <div class="panel panel-default">
           <div class="panel-body">
-            <%= image_tag('https://i.imgur.com/OOhmIDm.png', class: 'img-responsive') %>
+            <%= image_tag(book.cover.url(:thumb), class: 'img-responsive') %>
           </div>
           <div class="panel-footer text-center">
             <div class="panel-footer-text">
@@ -62,10 +62,10 @@
   <h2>Recomendados</h2>
   <div class="row">
     <% Book.all.first(5).each do |book| %>
-      <div class="col-xs-4 col-md-2" style="padding: 0 !important;">
+      <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
         <div class="panel panel-default">
           <div class="panel-body">
-            <%= image_tag('http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/book-icon.png', class: 'img-responsive') %>
+            <%= image_tag(book.cover.url(:thumb), class: 'img-responsive') %>
           </div>
           <div class="panel-footer text-center">
             <div class="panel-footer-text">
@@ -75,6 +75,14 @@
           </div>
         </div>
       </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="card" style="margin-top: 20px; padding-top: 20px;">
+  <div class="content">
+    <% Book.all.pluck(:tags).flatten.uniq.each do |tag| %>
+    <%= tag %>
     <% end %>
   </div>
 </div>

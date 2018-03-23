@@ -1,24 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<div class="card" style="margin-top: 20px; padding-top: 20px;">
+  <div class="content">
+    <div class="row">
+      <div class="col-xs-2 col-md-4">
+        <%= image_tag(@book.cover.url(:thumb)) %>
+      </div>
+      <div class="col-xs-2 col-md-4">
+        <h1 style="padding: 0; margin-top: -1%; margin-bottom: -3%;">
+          <%= @book.title %>
+        </h1>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+        <h2 style="padding: 0; color: #777;">
+          <%= @book.author %>
+        </h2>
 
-<p>
-  <strong>State:</strong>
-  <%= @book.comment %>
-</p>
+        <p>
+          <%= @book.comment %>
+        </p>
 
-<p>
-  <strong>Availability:</strong>
-  <%= @book.availability %>
-</p>
+        <p>
+          <%#= @book.availability %>
+        </p>
+      </div>
+      
+      <div class="col-xs-2 col-md-4"></div>
+    </div>
+    <br>
+      <%= link_to 'Edit', edit_book_path(@book) %> |
+      <%= link_to 'Back', books_path %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+
+

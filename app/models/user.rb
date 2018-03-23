@@ -33,10 +33,10 @@ class User < ApplicationRecord
   validates_format_of :email, with: VALID_EMAIL_REGEX
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
 
-  has_attached_file :avatar, :styles => { :medium => "500x500>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "500x500>", :thumb => "100x100#" }, :default_url => ":style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
-  has_attached_file :cover, :styles => { :medium => "1810x375>", :thumb => "602x125#" }, :default_url => "/images/:style/cover.png"
+  has_attached_file :cover, :styles => { :medium => "1810x375>", :thumb => "602x125#" }, :default_url => ":style/cover.png"
   validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
 
   def validate_username

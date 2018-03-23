@@ -241,7 +241,7 @@ nav.navbar.navbar-default {
 
 .card .cover {
   background-color: #f5f5f5;
-  height: 250px;
+  height: auto;
   overflow: hidden;
   border-radius: 4px 4px 0 0;
 }
@@ -453,17 +453,9 @@ p.help-block {
 /* .panel { -webkit-box-shadow: none; box-shadow: none; border: 0px; } */
 
 .panel-footer{
-  height: 60px;
-  overflow: auto;
+  height: 50px;
 }
 
-.panel-footer-text {
-  font-size: 0.9em;
-  position: absolute;
-  top: 82%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
 
 .round-image-50 {
   background-color: white;
@@ -478,3 +470,12 @@ p.help-block {
 }
 
 .round-image-50 img { width: 100% }
+
+.panel-body{
+  padding: 0;  
+}
+
+.panel { 
+  border-radius: 8px; 
+  margin: 2px;
+}
