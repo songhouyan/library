@@ -1,6 +1,6 @@
 <%# link_to 'Prestar', new_personal_message_path(receiver_id: @book.user), :class => "btn" %>
 <%= form_for Request.new, url: requests_path do |f| %>
     <%= f.hidden_field :book_id, value: @book.id %>
-    <%= f.hidden_field :user_id, value: @book.user.id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.submit 'Prestar', class: 'btn btn-default' %>
 <% end %>

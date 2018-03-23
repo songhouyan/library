@@ -23,6 +23,14 @@ class RequestsController < ApplicationController
         end
     end
 
+    def destroy
+        request = Request.find(params[:id])
+        if Book.find(request.book.id).update(availability: false)
+            flash[:success] = 'Aceptado'
+            redirect_to requests_path
+        end
+    end
+
     private
     
     def request_params
