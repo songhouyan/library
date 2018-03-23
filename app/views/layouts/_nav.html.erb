@@ -20,7 +20,7 @@
       <% if current_user %>
         <% #This looks ugly af  %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.reader_admin? %>
-          <li id="library" class=""><%= link_to 'Mi biblioteca', books_path %></li>
+          <li id="library" class=""><%= link_to 'Mi biblioteca', profile_path(current_user.username) %></li>
         <%# end %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.area_chief? or current_user.reader_admin? or current_user.manager? %>
           <li id="browse" class=""><%= link_to 'Explorar', feed_path %></li>
@@ -42,6 +42,16 @@
           <span class="navbar-text hidden-xs">
             Bienvenido, <%=  current_user.name.nil? ? current_user.username : current_user.name.split(' ').first %>
           </span>
+          <li>
+            <%= link_to conversations_path do %> <%#style: 'color: #424233' do %>
+              <%= fa_icon 'envelope 1x', style: 'margin-left: -15px; margin-top: -1px; font-size: 1.8em; -webkit-text-stroke: 2px #F5F5F5;' %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to conversations_path do %> <%#style: 'color: #424233' do %>
+              <%= fa_icon 'bell  1x', style: 'margin-left: -15px; margin-top: -1px; font-size: 1.8em; -webkit-text-stroke: 2px #F5F5F5;' %>
+            <% end %>
+          </li>
           <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
           <li class="dropdown">
             <a href=<%#= profile_path(current_user.employee_id) %> class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username+' ' %><span class="caret"></span></a>
