@@ -8,8 +8,8 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <%= link_to root_path do %>
-          <%= fa_icon 'book 3x', style: 'margin-top: 5px;' %>
+        <%= link_to root_path do %>图书馆首页
+          <%#= fa_icon 'book 3x', style: 'margin-top: 5px;' %>
           <%#= image_tag('logo.png', size: '45x36', alt: 'Brand', style: 'margin-top: 8px;') %>
         <% end %>
       </a>
@@ -23,7 +23,7 @@
           <li id="library" class=""><%= link_to '我的图书馆', profile_path(current_user.username) %></li>
         <%# end %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.area_chief? or current_user.reader_admin? or current_user.manager? %>
-          <li id="browse" class=""><%= link_to '搜索', feed_path %></li>
+          <li id="browse" class=""><%= link_to '我的关注', feed_path %></li>
         <%# end %>
       <% end %>
       </ul>

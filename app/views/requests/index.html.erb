@@ -1,9 +1,9 @@
-<h1>My requests</h1>
+<h1>我的请求</h1>
 <table class="table">
     <thead>
         <tr>
-            <th>Libro</th>
-            <th>Usuario</th>
+            <th>书</th>
+            <th>用户</th>
             <th colspan="1"></th>
         </tr>
     </thead>
@@ -12,7 +12,7 @@
             <tr>
                 <td><%= link_to request.book.title, request.book %></td>
                 <td><%= request.user.username %></td>
-                <td><%= link_to '接受', request, method: :delete, data: { confirm: 'Are you sure?' } if request.book.availability? %></td>
+                <td><%= link_to '接受', request, method: :delete, data: { confirm: '是否确定？' } if request.book.availability? %></td>
             </tr>
         <% end %>
     </tbody>
