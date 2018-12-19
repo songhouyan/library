@@ -1,7 +1,7 @@
 <%= simple_form_for(book) do |f| %>
   <% if book.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+      <h2><%= pluralize(book.errors.count, "error") %> 禁止保存这本书</h2>
 
       <ul>
       <% book.errors.full_messages.each do |message| %>
@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <%= f.label :cover %>
+  <%= f.label :封面 %>
   <label class="btn btn-default" style="margin-left: 0.6%;">
     Add a file!
     <span style="display:none;">
@@ -47,6 +47,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit 'Guardar', class: 'btn btn-success' %>
+    <%= f.submit '保存', class: 'btn btn-success' %>
   </div>
 <% end %>

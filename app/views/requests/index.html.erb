@@ -12,7 +12,7 @@
             <tr>
                 <td><%= link_to request.book.title, request.book %></td>
                 <td><%= request.user.username %></td>
-                <td><%= link_to 'Aceptar', request, method: :delete, data: { confirm: 'Are you sure?' } if request.book.availability? %></td>
+                <td><%= link_to '接受', request, method: :delete, data: { confirm: 'Are you sure?' } if request.book.availability? %></td>
             </tr>
         <% end %>
     </tbody>

@@ -9,12 +9,12 @@
   >
     <div class="content">
       <div class="container-90">
-        <h2 class="text-center title">Iniciar Sesión</h2>
+        <h2 class="text-center title">登录</h2>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'login' }) do |f| %>
           <div class="form-inputs">
-            <%= f.input :login, required: false, autofocus: true, label: false, placeholder: 'Nombre de Usuario' %>
-            <%= f.input :password, required: false, label: false, placeholder: 'Contraseña' %>
+            <%= f.input :login, required: false, autofocus: true, label: false, placeholder: '用户名' %>
+            <%= f.input :password, required: false, label: false, placeholder: '密码' %>
             <%#= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
 

@@ -1,7 +1,7 @@
 <div class="container-90" style="margin-right: 200px;">
   <%# Todo esto lo podríamos hacer más bonito con algún arreglo que le de el nombre al header, y las opciones de qué libros consultar. %>
   <%# Así no repetimos prácticamente lo mismo 4 veces %>
-  <h2>Últimos Libros</h2>
+  <h2>过去书</h2>
   <div class="row">
     <% Book.all.where(availability: true).last(5).reverse.each do |book| %>
       <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
@@ -22,7 +22,7 @@
     <% end %>
   </div>
   
-  <h2>Más Prestados</h2>
+  <h2>提供最</h2>
   <div class="row">
     <% Book.all.first(5).each do |book| %>
       <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
@@ -44,7 +44,7 @@
     <% end %>
   </div>
 
-  <h2>Últimos Regresados</h2>
+  <h2>最后返回</h2>
   <div class="row">
     <% Book.all.last(5).reverse.each do |book| %>
       <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
@@ -65,7 +65,7 @@
     <% end %>
   </div>
 
-  <h2>Recomendados</h2>
+  <h2>推荐</h2>
   <div class="row">
     <% Book.all.first(5).each do |book| %>
       <div class="col-xs-6 col-md-2" style="padding: 0 !important;">

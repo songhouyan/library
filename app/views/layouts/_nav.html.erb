@@ -20,10 +20,10 @@
       <% if current_user %>
         <% #This looks ugly af  %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.reader_admin? %>
-          <li id="library" class=""><%= link_to 'Mi biblioteca', profile_path(current_user.username) %></li>
+          <li id="library" class=""><%= link_to '我的图书馆', profile_path(current_user.username) %></li>
         <%# end %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.area_chief? or current_user.reader_admin? or current_user.manager? %>
-          <li id="browse" class=""><%= link_to 'Explorar', feed_path %></li>
+          <li id="browse" class=""><%= link_to '搜索', feed_path %></li>
         <%# end %>
       <% end %>
       </ul>
@@ -31,7 +31,7 @@
       <ul class="nav navbar-nav navbar-right">
         <%= form_tag search_path, method: :get, class: 'navbar-form navbar-left' do %>
           <%= text_field_tag :search, params[:search], class: 'form-control'%>
-          <%= submit_tag 'Buscar', class: 'btn btn-primary' %>
+          <%= submit_tag '搜索', class: 'btn btn-primary' %>
         <% end %>
         <% if current_user %>
           <li>
@@ -56,15 +56,15 @@
           <li class="dropdown">
             <a href=<%#= profile_path(current_user.employee_id) %> class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username+' ' %><span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><%= link_to 'Perfil', profile_path(current_user.username) %></li>
-              <li><%= link_to 'Opciones', edit_user_registration_path %></li>
+              <li><%= link_to '配置文件', profile_path(current_user.username) %></li>
+              <li><%= link_to '选择', edit_user_registration_path %></li>
               <li role="separator" class="divider"></li>
-              <li><%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to '登出', destroy_user_session_path, method: :delete %></li>
             </ul>
           </li>
         <% else %>
-            <li><%= link_to 'Iniciar Sesión', new_user_session_path %></li>
-            <li><%#= link_to "Sign Up!", new_user_registration_path %></li>
+            <li><%= link_to '登录', new_user_session_path %></li>
+            <li><%#= link_to "注册", new_user_registration_path %></li>
         <% end %>
       </ul>
     </div>

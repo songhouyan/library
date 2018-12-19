@@ -18,7 +18,7 @@ class BooksController < ApplicationController
     end
     
     if books.empty?
-      flash[:notice] = 'Ningún resultado'
+      flash[:notice] = '没有结果'
       redirect_to root_path
     else
       @books = books
