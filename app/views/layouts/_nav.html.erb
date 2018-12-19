@@ -40,7 +40,7 @@
             <% end %>
           </li>
           <span class="navbar-text hidden-xs">
-            Bienvenido, <%=  current_user.name.nil? ? current_user.username : current_user.name.split(' ').first %>
+            欢迎, <%=  current_user.name.nil? ? current_user.username : current_user.name.split(' ').first %>
           </span>
           <li>
             <%= link_to conversations_path do %> <%#style: 'color: #424233' do %>
