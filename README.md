@@ -24,6 +24,7 @@
 <img src="/picture/主界面.png" width="700">
 
 
+个人
 
 <img src="/picture/个人.png" width="700">
 
