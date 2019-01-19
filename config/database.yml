@@ -83,3 +83,4 @@ production:
   database: librapp_production
   username: librapp
   password: <%= ENV['LIBRAPP_DATABASE_PASSWORD'] %>
+  
