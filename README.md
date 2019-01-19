@@ -29,22 +29,27 @@
 <img src="/picture/个人.png" width="700">
 
 
+动态
 
 <img src="/picture/动态.png" width="700">
 
 
+添加
 
 <img src="/picture/添加.png" width="700">
 
 
+搜索
 
 <img src="/picture/搜索.png" width="700">
 
 
+交流
 
 <img src="/picture/交流.png" width="700">
 
 
+共享
 
 <img src="/picture/共享.png" width="700">
 
