@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <%= link_to root_path do %>图书馆首页
+        <%= link_to root_path do %>果壳图书交流共享首页
           <%#= fa_icon 'book 3x', style: 'margin-top: 5px;' %>
           <%#= image_tag('logo.png', size: '45x36', alt: 'Brand', style: 'margin-top: 8px;') %>
         <% end %>
@@ -20,7 +20,7 @@
       <% if current_user %>
         <% #This looks ugly af  %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.reader_admin? %>
-          <li id="library" class=""><%= link_to '我的图书馆', profile_path(current_user.username) %></li>
+          <li id="library" class=""><%= link_to '我的空间', profile_path(current_user.username) %></li>
         <%# end %>
         <%# if current_user.admin? or current_user.chief_executive? or current_user.area_chief? or current_user.reader_admin? or current_user.manager? %>
           <li id="browse" class=""><%= link_to '我的关注', feed_path %></li>
