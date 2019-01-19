@@ -2,5 +2,5 @@
 <%= form_for Request.new, url: requests_path do |f| %>
     <%= f.hidden_field :book_id, value: @book.id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.submit 'Prestar', class: 'btn btn-default' %>
+    <%= f.submit '交流', class: 'btn btn-default' %>
 <% end %>

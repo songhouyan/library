@@ -1,10 +1,10 @@
-<h1>New message to <%= @receiver.name %></h1>
+<h1>发送新消息给<%= @receiver.name %></h1>
 
 <%= form_for @personal_message do |f| %>
   <%= hidden_field_tag 'receiver_id', @receiver.id %>
 
-  <%= f.label :body %>
+  <%= f.label :请输入 %>
   <%= f.text_area :body %>
 
-  <%= f.submit %>
-<% end %>
+  <%= f.submit '确定'%>
+<% end %> 
