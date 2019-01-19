@@ -7,9 +7,9 @@
 
   <%= form_for @personal_message do |f| %>
     <%= hidden_field_tag 'conversation_id', @conversation.id %>
-    <%= f.label :body %>
+    <%= f.label :请输入 %>
     <%= f.text_area :body %>
 
-    <%= f.submit %>
+    <%= f.submit :确定 %>
   <% end %>
 </div>

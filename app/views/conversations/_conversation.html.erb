@@ -1,8 +1,8 @@
 <div>
-  Chatting with <%= conversation.with(current_user).name %>
+  正在和<%= conversation.with(current_user).name %>交谈
   <br>
   <em><%= conversation.personal_messages.last.body.truncate(50) %></em>
   <br>
-  <%= link_to 'View conversation', conversation_path(conversation) %>
+  <%= link_to '查看聊天', conversation_path(conversation) %>
   <hr>
 </div>

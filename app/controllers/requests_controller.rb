@@ -15,7 +15,7 @@ class RequestsController < ApplicationController
     def create
         @request = Request.new(request_params)
         if @request.save
-            flash[:notice] = 's u c c ess'
+            flash[:notice] = '成功'
             redirect_to  new_personal_message_path(receiver_id: @request.user)
         else
             flash[:notice] = 'r e a l s a d b o i h o u r s'
@@ -26,7 +26,7 @@ class RequestsController < ApplicationController
     def destroy
         request = Request.find(params[:id])
         if Book.find(request.book.id).update(availability: false)
-            flash[:success] = 'Aceptado'
+            flash[:success] = '接受'
             redirect_to requests_path
         end
     end

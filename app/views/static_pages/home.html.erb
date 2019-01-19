@@ -1,7 +1,7 @@
 <div class="container-90" style="margin-right: 200px;">
   <%# Todo esto lo podríamos hacer más bonito con algún arreglo que le de el nombre al header, y las opciones de qué libros consultar. %>
   <%# Así no repetimos prácticamente lo mismo 4 veces %>
-  <h2>过去书</h2>
+  <h2>可共享图书</h2>
   <div class="row">
     <% Book.all.where(availability: true).last(5).reverse.each do |book| %>
       <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
@@ -22,27 +22,6 @@
     <% end %>
   </div>
   
-  <h2>提供最</h2>
-  <div class="row">
-    <% Book.all.first(5).each do |book| %>
-      <div class="col-xs-6 col-md-2" style="padding: 0 !important;">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <%# Aquí sería la foto_irl del libro %>
-            <%= link_to book_path(book) do %>
-              <%= image_tag(book.cover.url(:thumb), class: 'img-responsive') %>
-            <% end %>
-          </div>
-          <div class="panel-footer text-center">
-            <div class="panel-footer-text">
-              <%= book.title %>
-            </div>
-            <%#= book.author %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
 
   <h2>最新添加</h2>
   <div class="row">
@@ -94,3 +73,4 @@
     <% end %>
   </div>
 </div>
+<center>中国科学院大学版权所有 © 2018 宋厚岩 张家伟 张成玲 史小磊</center>
