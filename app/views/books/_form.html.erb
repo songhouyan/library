@@ -23,11 +23,11 @@
   
   
   <div class="field">
-    <%= f.input :title %>
+    <%= f.input :title, label: '标题', placeholder: "标题最多20个字", error: "标题不能为空", input_html: { maxlength: 20 }%>
   </div>
 
   <div class="field">
-    <%= f.input :author %>
+    <%= f.input :author, label: '作者'%>
   </div>
 
   <div class="field">
@@ -35,15 +35,15 @@
   </div>
 
   <div class="field">
-    <%= f.input :comment %>
+    <%= f.input :comment, label: '简介' %>
   </div>
 
   <div class="field">
-    <%= f.input :availability %>
+    <%= f.input :availability, label: '是否可共享'%>
   </div>
 
   <div class="field">
-    <%= f.input :tags %>
+    <%= f.input :tags, label: '标签' %>
   </div>
 
   <div class="actions">

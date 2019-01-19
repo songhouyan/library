@@ -43,8 +43,10 @@
       </div>
     </div>
     <br>
-      <%= link_to '修改', edit_book_path(@book) %> |
-      <%= link_to '返回', profile_path(@book.user.username) %>
+      <% if current_user == User.all.first then %>
+       <%= link_to '修改', edit_book_path(@book) %> |
+      <% end %> 
+      <%= link_to '访问', profile_path(@book.user.username) %>
   </div>
 </div>
 </div>

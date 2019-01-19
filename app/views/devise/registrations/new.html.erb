@@ -31,10 +31,10 @@
               </span>
             </label>
             <br> <br>
-            <%= f.input :username, required: true, autofocus: true %>
-            <%= f.input :email, required: true, autofocus: true %>
-            <%= f.input :password, required: true, hint: ("最少#{@minimum_password_length}位" if @minimum_password_length) %>
-            <%= f.input :password_confirmation, required: true %>
+            <%= f.input :username, label: '用户名', required: true, autofocus: true %>
+            <%= f.input :email, label: '邮箱',required: true, autofocus: true %>
+            <%= f.input :password, label: '密码',required: true, hint: ("最少#{@minimum_password_length}位" if @minimum_password_length) %>
+            <%= f.input :password_confirmation, label: '确认密码', required: true %>
           </div>
 
           <div class="form-actions">
