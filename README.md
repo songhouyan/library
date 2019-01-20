@@ -72,7 +72,7 @@
 
 
 
-## 说明
+## Userstory
 
 
 
@@ -82,8 +82,8 @@
 在终端（MacOS或Linux）中执行以下代码
 
 ```
-$ git clone https://github.com/hrwhisper/CourseSelect
-$ cd CourseSelect
+$ git clone https://github.com/songhouyan/mysaashomework
+$ cd mysaashomework
 $ bundle install
 $ rake db:migrate
 $ rake db:seed
@@ -140,6 +140,12 @@ bundle install
 
 密码：`password`
 
+2.普通用户：
+用户名：'zhangjiawei'
+
+密码：’password‘
+
+
 
 
 
@@ -149,22 +155,11 @@ bundle install
 
 项目可直接在Heroku上免费部署
 
-1.fork此项目到自己Github账号下
-
-2.创建Heroku账号以及Heroku app
-
-3.将Heroku app与自己Github下的fork的项目进行连接
-
-4.下载配置[Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)命令行工具
-
-5.运行`heroku login`在终端登陆，检查与heroku app的远程连接情况`git config --list | grep heroku`，若未检查到相应的app，请看[这里](http://stackoverflow.com/questions/5129598/how-to-link-a-folder-with-an-existing-heroku-app)
-
-6.运行部署，详情[请戳这里](https://devcenter.heroku.com/articles/getting-started-with-rails4#rails-asset-pipeline)
 
 我的部署实例：
 
 ```
-heroku create hrcourseselect
+heroku create
 git push heroku master
 heroku run rake db:migrate
 heroku run rake db:seed
@@ -175,7 +170,7 @@ heroku run rake db:seed
 
 ## 测试
 
-本项目包含了部分的测试（integration/fixture/model test），测试文件位于/test目录下。运行测试：
+本项目包含了部分的测试（controller、integration、fixture、model等），测试文件位于/test目录下。运行测试：
 
 ```
 PENG-MacBook-Pro:IMS_sample PENG-mac$ rake test
@@ -196,7 +191,8 @@ Finished in 1.202169s, 7.4865 runs/s, 16.6366 assertions/s.
 
 ## 本系的特色功能
 
-1. 课程开放、关闭
+1. 管理员权限可以管理所有图书
+2. 图书爱好者之间可以互相交流
 
 
 
