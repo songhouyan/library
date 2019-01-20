@@ -158,13 +158,14 @@ heroku run rake db:seed
 本项目包含了部分的测试（controller、integration、fixture、model等），测试文件位于/test目录下。运行测试：
 
 ```
-PENG-MacBook-Pro:IMS_sample PENG-mac$ rake test
-Run options: --seed 15794
+songyandeMacBook-Air:library songyan$ rake test
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/songyan/Desktop/my/library/config/initializers/new_framework_defaults.rb:23)
+Run options: --seed 40902
 
 # Running:
 .........
 
-Finished in 1.202169s, 7.4865 runs/s, 16.6366 assertions/s.
+Finished in 0.614730s, 13.0138 runs/s, 0.0000 assertions/s.
 
 9 runs, 20 assertions, 0 failures, 0 errors, 0 skips
 ```
@@ -184,7 +185,7 @@ Finished in 1.202169s, 7.4865 runs/s, 16.6366 assertions/s.
 # 待完善
 
 1. 智能推荐
-2. 
+2. 类似论坛的图书经验交流帖子
 
 
 
