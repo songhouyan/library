@@ -21,27 +21,44 @@
 
 系统主界面
 
-<img src="/picture/主界面.png" width="700">
+<img src="/picture/主页面.png" width="700">
 
 
 个人
 
-<img src="/picture/个人.png" width="700">
+<img src="/picture/个人界面.png" width="700">
+
+修改信息
+
+
+<img src="/picture/修改信息.png" width="700">
 
 
 动态
 
-<img src="/picture/动态.png" width="700">
+<img src="/picture/关注动态.png" width="700">
 
 
 添加
 
-<img src="/picture/添加.png" width="700">
+<img src="/picture/添加图书.png" width="700">
 
 
 搜索
 
 <img src="/picture/搜索.png" width="700">
+
+
+图书信息
+
+
+<img src="/picture/图书信息.png" width="700">
+
+
+我的图书
+
+
+<img src="/picture/我的图书.png" width="700">
 
 
 交流
