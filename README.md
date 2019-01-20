@@ -113,13 +113,17 @@ $ rails s
 密码：`password`
 
 2.普通用户：
-用户名：'zhangjiawei'
+用户名：`zhangjiawei`
 
-密码：’password‘
+密码：`password`
 
+用户名：`shixiaolei`
 
+密码：`password`
 
+用户名：`zhangchengling`
 
+密码：`password`
 
 
 
