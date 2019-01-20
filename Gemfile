@@ -64,3 +64,4 @@ gem 'pg_search'
 gem 'font-awesome-rails'
 
 gem 'paperclip', '~> 4.1'
+
